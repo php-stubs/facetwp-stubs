@@ -37,5 +37,5 @@ while read -r VERSION; do
 
     # # Tag version
     git commit facetwp-stubs.php -m "Generate stubs for FacetWP ${VERSION}"
-    # git tag "v${VERSION}"
+    git tag "v${VERSION}"
 done < <(get_version | tac)
