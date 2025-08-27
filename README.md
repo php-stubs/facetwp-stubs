@@ -1,5 +1,8 @@
 # FacetWP Stubs
 
+[![Packagist stats](https://img.shields.io/packagist/dt/php-stubs/facetwp-stubs.svg)](https://packagist.org/packages/php-stubs/facetwp-stubs/stats)
+[![Packagist](https://img.shields.io/packagist/v/php-stubs/facetwp-stubs.svg?color=4CC61E&style=popout)](https://packagist.org/packages/php-stubs/facetwp-stubs)
+
 It provides stub declarations for [FacetWP](https://facetwp.com/)
 core functions, classes and interfaces.
 These stubs can help plugin and theme developers leverage static analysis tools
