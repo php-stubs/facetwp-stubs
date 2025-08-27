@@ -222,6 +222,13 @@ class FacetWP_Builder
     function parse_uri_tags($values)
     {
     }
+    /**
+     * Initialize CodeMirror for Listing Builder editors
+     * @since 4.3.2
+     */
+    function initialize_builder_editor($hook)
+    {
+    }
 }
 class FacetWP_Diff
 {
@@ -285,6 +292,20 @@ class FacetWP_Display
     {
     }
     /**
+     * get google api key from GMAPS_API_KEY, facetwp_gmaps_api_key filter, or gmaps_api_key setting
+     * @since 4.4
+     * */
+    function get_gmaps_api_key()
+    {
+    }
+    /**
+     * backwards compatibility for params added in facetwp_gmaps_url filter
+     * @since 4.4
+     */
+    function gmaps_params($params)
+    {
+    }
+    /**
      * Output facet scripts
      */
     function front_scripts()
@@ -317,7 +338,8 @@ final class FacetWP_Helper
     {
     }
     /**
-     * Get available facet types
+     * Get available facet types     * 
+     * @since 4.4 Added Map type facet
      */
     function get_facet_types()
     {
@@ -376,6 +398,15 @@ final class FacetWP_Helper
      * @return array
      */
     function get_facets_by($setting, $value)
+    {
+    }
+    /**
+     * Fetch facets by data source type (prefix, ie tax, cf, acf ...)
+     * @param string $value
+     * @return array
+     * @since 4.4
+     */
+    function get_facets_by_datasource_type($value)
     {
     }
     /**
@@ -755,6 +786,12 @@ class FacetWP_Overrides
     function ignore_post_types($is_main_query, $query)
     {
     }
+    /**
+     * Disable indexer
+     */
+    function disable_indexer($enabled)
+    {
+    }
 }
 class FacetWP_Renderer
 {
@@ -959,6 +996,13 @@ class FacetWP_Settings
      * @since 3.0.0
      */
     function get_registered_settings()
+    {
+    }
+    /**
+     * Get gmaps api key if set from filter or constant
+     * @since 4.4
+     */
+    function get_gmaps_key_other()
     {
     }
     /**
@@ -1332,6 +1376,86 @@ class FacetWP_Facet_Hierarchy extends \FacetWP_Facet
     {
     }
 }
+class FacetWP_Facet_Map extends \FacetWP_Facet
+{
+    public $label;
+    public $map_facet;
+    public $proximity_facet;
+    public $proximity_coords;
+    public $field_defaults;
+    function __construct()
+    {
+    }
+    /**
+     * Generate the facet HTML
+     */
+    function render($params)
+    {
+    }
+    /**
+     * Is filtering turned on for the map?
+     * @return bool
+     */
+    function is_map_filtering_enabled()
+    {
+    }
+    /**
+     * Is a proximity facet in use? If so, return a lat/lng array
+     * @return mixed array of coordinates, or FALSE
+     */
+    function is_proximity_in_use()
+    {
+    }
+    function add_marker_data($output, $params)
+    {
+    }
+    /**
+     * Grab all coordinates from the index table
+     */
+    function get_coordinates($post_ids, $facet)
+    {
+    }
+    /**
+     * Is the current point within the proximity bounds?
+     */
+    function is_within_bounds($latlng)
+    {
+    }
+    /**
+     * Is this page using a map facet?
+     */
+    function is_map_active()
+    {
+    }
+    /**
+     * Get marker content (pulled via ajax)
+     */
+    function get_marker_content($post_id, $facet_name = \false)
+    {
+    }
+    /**
+     * Filter the query based on the map bounds
+     */
+    function filter_posts($params)
+    {
+    }
+    /**
+     * Output any front-end scripts
+     */
+    function front_scripts()
+    {
+    }
+    function register_fields()
+    {
+    }
+    /**
+     * Index the coordinates
+     * We expect a comma-separated "latitude, longitude"
+     */
+    function index_latlng($params, $class)
+    {
+    }
+}
 class FacetWP_Facet_Number_Range extends \FacetWP_Facet
 {
     function __construct()
@@ -1409,6 +1533,22 @@ class FacetWP_Facet_Proximity_Core extends \FacetWP_Facet
     /* (array) Associative array containing post_id => [lat, lng] */
     public $post_latlng = [];
     function __construct()
+    {
+    }
+    /**
+     * Get places version from setting, default to legacy version - places-service
+     * Also can be set with filter
+     * add_filter( 'facetwp_proximity_places_version', function($version) { return 'place-class'; } );
+     * @since 4.4
+     */
+    function get_places_version()
+    {
+    }
+    /**
+     * Add a places version as FWP.settings.places
+     * @since 4.4
+     */
+    function add_places_version($output, $params)
     {
     }
     /**
@@ -1749,6 +1889,20 @@ class FacetWP_Integration_ACF
     function layout_builder_values($value, $item)
     {
     }
+    /**
+     * Update the index when terms get saved
+     * @since 4.4
+     */
+    function edit_term($term_id, $tt_id, $taxonomy)
+    {
+    }
+    /**
+     * Update the index when terms get deleted
+     * @since 4.4
+     */
+    function delete_term($term_id, $tt_id, $taxonomy)
+    {
+    }
 }
 class FacetWP_Integration_EDD
 {
@@ -2020,6 +2174,13 @@ class FacetWP_Integration_WooCommerce
      * @since 3.6.8
      */
     function default_catalog_orderby($orderby)
+    {
+    }
+    /**
+     * Prevent WooCommerce breadcrumb from showing "Page X" on page 1 and higher when there are facet selections or pre-selected facets
+     * @since 4.3.6
+     */
+    function prevent_wc_breadcrumb_paged($crumbs, $breadcrumb)
     {
     }
 }
