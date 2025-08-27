@@ -8,7 +8,7 @@ core functions, classes and interfaces.
 These stubs can help plugin and theme developers leverage static analysis tools
 like [PHPStan](https://github.com/phpstan/phpstan).
 
-The stubs are generated from source code manually placed in `source/facetwp` 
+The stubs are generated from source code manually placed in `source/facetwp`
 using [php-stubs/generator](https://github.com/php-stubs/generator).
 
 FacetWP's changelog can be found here [https://facetwp.com/help-center/changelog/](https://facetwp.com/help-center/changelog/).
