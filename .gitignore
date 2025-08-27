@@ -1,4 +1,5 @@
 .DS_Store
 /vendor/
 /composer.lock
-/source/facetwp/
+/source/*
+!/source/.gitkeep
