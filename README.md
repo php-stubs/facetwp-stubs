@@ -8,6 +8,8 @@ like [PHPStan](https://github.com/phpstan/phpstan).
 The stubs are generated from source code manually placed there `source/facetwp` 
 using [php-stubs/generator](https://github.com/php-stubs/generator).
 
+FacetWP's changelog can be found here [https://facetwp.com/help-center/changelog/](https://facetwp.com/help-center/changelog/).
+
 ## Requirements
 
 - PHP ^8.0
