@@ -1,11 +1,11 @@
 # FacetWP Stubs
 
-It provides stub declarations for [FacetWP](https://facetwp.com//)
+It provides stub declarations for [FacetWP](https://facetwp.com/)
 core functions, classes and interfaces.
 These stubs can help plugin and theme developers leverage static analysis tools
 like [PHPStan](https://github.com/phpstan/phpstan).
 
-The stubs are generated from source code manually placed there `source/facetwp` 
+The stubs are generated from source code manually placed in `source/facetwp` 
 using [php-stubs/generator](https://github.com/php-stubs/generator).
 
 FacetWP's changelog can be found here [https://facetwp.com/help-center/changelog/](https://facetwp.com/help-center/changelog/).
@@ -32,7 +32,6 @@ This package is versioned to match the FacetWP version from which the stubs are 
 
 1. Run modern PHP version
 2. Clone this repository and `cd` into it
-3. Download the latetst source from facetwp.com and extract the zip in `source/facetwp` directory.
+3. Download the latest source from your [FacetWP](https://facetwp.com/my-account/) account and extract the zip in `source/facetwp` directory. You can also download the zip and save it as `source/facetwp.zip`.
 4. Run `./release-latest-versions.sh`
-
-This will update `facetwp-stubs.php` per version, tag and commit it.
+This will automaticly update `facetwp-stubs.php` per version, tag and commit it.
