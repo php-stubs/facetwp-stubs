@@ -34,4 +34,4 @@ This package is versioned to match the FacetWP version from which the stubs are 
 2. Clone this repository and `cd` into it
 3. Download the latest source from your [FacetWP](https://facetwp.com/my-account/) account and extract the zip in `source/facetwp` directory. You can also download the zip and save it as `source/facetwp.zip`.
 4. Run `./release-latest-versions.sh`
-This will automaticly update `facetwp-stubs.php` per version, tag and commit it.
+This will automatically update `facetwp-stubs.php` per version, tag and commit it.
