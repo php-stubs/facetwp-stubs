@@ -11,7 +11,7 @@ like [PHPStan](https://github.com/phpstan/phpstan).
 The stubs are generated from source code manually placed in `source/facetwp` 
 using [php-stubs/generator](https://github.com/php-stubs/generator).
 
-FacetWP's changelog can be found here [https://facetwp.com/help-center/changelog/](https://facetwp.com/help-center/changelog/).
+The changelog can be found in [FacetWP's Help Center](https://facetwp.com/help-center/changelog/).
 
 ## Requirements
 
